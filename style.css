@@ -1,3 +1,4 @@
+/* Reset e estrutura geral */
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
@@ -7,49 +8,69 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .container {
     width: 100%;
-    max-width: 500px;
+    max-width: 480px;
     padding: 20px;
     box-sizing: border-box;
     text-align: center;
 }
 
+/* Transição suave entre telas */
 .tela {
     display: none;
-    animation: fadeIn 0.4s ease;
+    animation: fadeIn 0.5s ease;
 }
 
 .tela.ativa {
     display: block;
 }
 
+/* Animação */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Botões e links */
 button,
 a {
     background: #ffd700;
     color: #000;
-    padding: 12px 24px;
+    padding: 14px 24px;
     border: none;
     font-weight: bold;
     font-size: 16px;
-    border-radius: 10px;
+    border-radius: 12px;
     margin-top: 20px;
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
-    transition: background 0.3s;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 button:hover,
 a:hover {
     background: #e6c200;
+    transform: translateY(-2px);
 }
 
+/* Perguntas */
 #pergunta {
-    font-size: 20px;
+    font-size: 22px;
     margin-bottom: 20px;
+    font-weight: 600;
 }
 
 #respostas button {
@@ -57,69 +78,104 @@ a:hover {
     margin: 10px 0;
     background: #fff;
     border: 2px solid #000;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 12px;
+    transition: background 0.3s;
 }
 
+#respostas button:hover {
+    background: #e6e6e6;
+}
+
+/* Gabarito fixo */
 footer#gabarito {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    background: transparent;
+    background: rgba(255, 255, 255, 0.8);
     color: #000;
     padding: 16px;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
     text-align: center;
     backdrop-filter: blur(4px);
     text-shadow: 1px 1px 1px #fff;
     z-index: 10;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
 }
 
-
-
+/* Escudos */
 .escudos {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 12px;
+    gap: 16px;
     margin: 20px 0;
 }
 
 .escudo {
-    height: 150px;
+    height: 120px;
+    max-width: 30%;
 }
 
 .x {
     height: 80px;
+    max-width: 20%;
 }
 
+/* Ingressos */
+.ingresso {
+    max-width: 100%;
+    height: auto;
+    margin-top: 12px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
 
+/* Foto final */
 #convite img {
     width: 100%;
-    max-width: 300px;
-    border-radius: 12px;
+    max-width: 320px;
+    border-radius: 16px;
     margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Botões finais */
+.botoes-final {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .botoes-final a {
     width: 45%;
-    margin: 5px;
+    font-size: 16px;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
+/* Ajustes para telas pequenas */
+@media (max-width: 400px) {
+    #pergunta {
+        font-size: 18px;
     }
 
-    to {
-        opacity: 1;
+    #respostas button {
+        font-size: 16px;
     }
-}
 
-.ingresso {
-    max-width: 100%;
-    height: auto;
-    margin-top: 10px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    footer#gabarito {
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    .escudo {
+        height: 100px;
+    }
+
+    .x {
+        height: 60px;
+    }
 }
