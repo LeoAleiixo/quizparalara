@@ -11,22 +11,21 @@
 <body>
     <div class="container">
         <div id="intro" class="tela ativa">
-            <h1>Oi Lara 🖤, que bom ver você por aqui!</h1>
+            <h1>Oi Lara 🖤 sou eu de novo!</h1>
             <p style="margin-top: 20px; font-size: 18px; line-height: 1.5;">
-                Tantos anos se passaram, desde o ensino fundamental até te reencontrar agora na internet.
-                Tivemos algumas conversas sobre o nosso Galo durante esse curto tempo que voltamos a nos falar,
-                então resolvi desenvolver esse quiz para você.
+                Você já sabe como funciona, né? Então deixei o quiz de lado pra te lembrar da sua agenda… cheia das suas
+                observações que, claro, eu guardei com todo carinho.
             </p>
             <p style="margin-top: 16px; font-size: 16px; line-height: 1.5;">
-                (Aumente o volume antes de iniciar)
+                (Lembre-se de aumentar o volume antes de iniciar kkkk)
             </p>
             <button onclick="iniciar()">Iniciar</button>
         </div>
 
-        <div id="quiz" class="tela">
-            <div id="pergunta"></div>
-            <div id="respostas"></div>
-            <footer id="gabarito">__/__/__ na ______ ___</footer>
+        <div id="calendario" class="tela">
+            <h2>Calendário - Maio 2025</h2>
+            <div id="calendar"></div>
+            <button onclick="mostrarFinal()">SEGUINTE</button>
         </div>
 
         <div id="final" class="tela">
@@ -35,14 +34,13 @@
             <div class="escudos">
                 <img src="galo.png" alt="Galo" class="escudo">
                 <img src="letrax.png" alt="X" class="x">
-                <img src="maringa.png" alt="Maringá" class="escudo">
+                <img src="cienciano.png" alt="Maringá" class="escudo">
             </div>
 
             <img src="ingressos.png" alt="Ingressos" class="ingresso">
 
-            <div style="margin-top: 20px; font-size: 20px; font-weight: bold;">
-                21/05/25 na Arena MRV
-            </div>
+            <div id="contador" style="margin-top: 20px; font-size: 20px; font-weight: bold;"></div>
+
 
             <button onclick="mostrarFoto()">SEGUINTE</button>
         </div>
@@ -50,13 +48,23 @@
 
 
         <div id="convite" class="tela">
-            <h2 style="margin-bottom: 20px;">Bora fazer a vida imitar a arte?</h2>
-            <img src="leoelara.png" alt="Leo e Lara">
+            <h2 style="margin-bottom: 20px;">Bora renovar nossas lembranças?</h2>
+            <div class="fotos-leo-lara">
+                <img src="leoelaraold.png" alt="Leo e Lara Antigos" class="foto antiga">
+                <img src="leoelara.png" alt="Leo e Lara Atuais" class="foto atual">
+            </div>
+
+
             <div class="botoes-final">
-                <a href="https://wa.me/5531971212125?text=Partiu%20Arena%20com%20você!" target="_blank">Bora</a>
-                <a href="https://wa.me/5531971212125?text=Não%20vai%20dar!" target="_blank">Não</a>
+                <a href="https://wa.me/5531971212125?text=Siim%2C%20n%C3%B3s%20vamos%20no%20jogo%20do%20Galo%20contra%20o%20Cienciano%20nessa%20quinta%20as%2021h30%21%20Vamos%20combinar%20%F0%9F%92%96"
+                    target="_blank">Bora</a>
+
+                <a href="https://wa.me/5531971212125?text=Infelizmente%2C%20mais%20uma%20vez%20n%C3%A3o%20vou%20conseguir%20ir%20no%20jogo%20com%20voc%C3%AA%20%F0%9F%98%94"
+                    target="_blank">Não</a>
+
             </div>
         </div>
+
 
     </div>
 

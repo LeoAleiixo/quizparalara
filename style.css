@@ -163,3 +163,138 @@ footer#gabarito {
         font-size: 18px;
     }
 }
+
+#calendar {
+    margin: 20px auto;
+    max-width: 350px;
+}
+
+#calendar table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#calendar th,
+#calendar td {
+    border: 1px solid #ddd;
+    width: 14.28%;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    cursor: default;
+    font-weight: normal;
+}
+
+#calendar th {
+    background: #f0f0f0;
+    font-weight: bold;
+}
+
+.dia-marcado {
+    background-color: #ffcccc;
+    color: #900;
+    font-weight: bold;
+    cursor: default;
+}
+
+.dia-marcado-forte {
+    background-color: #cc0000;
+    color: #fff;
+    font-weight: bold;
+}
+
+.dia-verde {
+    background-color: #c6f6d5;
+    color: #2f855a;
+    font-weight: bold;
+}
+
+.legend {
+    margin-top: 15px;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    font-size: 14px;
+}
+
+.legend-item {
+    margin-bottom: 5px;
+}
+
+.legend-color {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-right: 8px;
+    vertical-align: middle;
+    border-radius: 3px;
+}
+
+.legend-vermelho-forte {
+    background-color: #cc0000;
+}
+
+.legend-vermelho {
+    background-color: #ff6666;
+}
+
+.legend-verde {
+    background-color: #68d391;
+}
+
+.imagens-convite {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.imagens-convite img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.fotos-leo-lara {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.fotos-leo-lara img {
+    width: 100%;
+    max-width: 140px;
+    border-radius: 16px;
+    opacity: 0;
+    transform: scale(0.95);
+    filter: grayscale(100%);
+    animation: aparecerAntiga 1s ease forwards;
+}
+
+.fotos-leo-lara img.atual {
+    animation: aparecerAtual 2s ease forwards;
+    animation-delay: 1s;
+}
+
+@keyframes aparecerAntiga {
+    to {
+        opacity: 1;
+        transform: scale(1);
+        filter: grayscale(0%);
+    }
+}
+
+@keyframes aparecerAtual {
+    to {
+        opacity: 1;
+        transform: scale(1);
+        filter: grayscale(0%);
+    }
+}
